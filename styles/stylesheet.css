@@ -5,7 +5,8 @@ body {
     margin: 0;
     padding: 0;
     color: #010101;
-    background-color: rgb(193, 165, 24);
+    /*background-color: rgb(193, 165, 24);*/
+    background-color: silver;
 }
 
 /* Header */
@@ -164,7 +165,8 @@ body {
 /* Car Details Section */
 #services {
     text-align: center;
-    background-color: rgb(193, 165, 24); /* Different background */
+    /*background-color: rgb(193, 165, 24); /* Different background */
+    background-color: silver;
     color: rgb(7, 6, 6);
     padding: 2rem 0;
 }
