@@ -6,7 +6,25 @@ body {
     padding: 0;
     color: #010101;
     /*background-color: rgb(193, 165, 24);*/
-    background-color: silver;
+    background-color: darkslateblue;
+}
+
+#home {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    margin: auto;
+}
+
+/* Home Page */
+#home-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
 }
 
 /* Header */
