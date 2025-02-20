@@ -5,8 +5,11 @@ body {
     margin: 0;
     padding: 0;
     color: #010101;
-    /*background-color: rgb(193, 165, 24);*/
-    background-color: #3B3B3B;
+    background-color: beige;
+}
+
+#home {
+    background-color:#3B3B3B;
 }
 
 /* Home Page */
