@@ -6,7 +6,7 @@ body {
     padding: 0;
     color: #010101;
     /*background-color: rgb(193, 165, 24);*/
-    background-color: darkslateblue;
+    background-color: darkslategray;
 }
 
 /* Home Page */
@@ -17,7 +17,16 @@ body {
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    color: white;
 
+}
+
+#home-name {
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    color: crimson;
 }
 
 /* Header */
