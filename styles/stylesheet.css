@@ -9,7 +9,10 @@ body {
 }
 
 #home {
-    background-color:#3B3B3B;
+    /*background-color:#3B3B3B;*/
+    background-image: url("../img/background.gif");
+    background-size: cover;
+    background-position: center;
 }
 
 /* Home Page */
