@@ -10,6 +10,9 @@ body {
     padding: 0;
     color: #010101;
     background-color: rgb(44, 43, 43);
+    display:flex;
+    flex-direction:column;
+    min-height: 100vh;
 }
 
 #home {
@@ -36,7 +39,7 @@ body {
 }
 
 #home h2 {
-    margin: 0;
+    margin: 2re;
     padding-top: 0;
     
 }
@@ -169,6 +172,7 @@ footer {
     text-align: center;
     padding: 1rem;
     width: 100%;
+    margin-top: auto;
 }
 
 
@@ -240,7 +244,7 @@ footer {
 }
 
 #resume-embed {
-    width: 75%;
+    width: 40vw;
     height: 100vh;
 }
 .resume h2 {
@@ -250,15 +254,6 @@ footer {
     font-size: 2.5rem;
     color: greenyellow;
 }
-
-/* Make the first image take up a full row */
-.resume-img img:first-child {
-    grid-column: span 2;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 
 #contact-me h2 {
     font-family: "Permanent Marker", serif;
@@ -282,7 +277,8 @@ footer {
 #msg-container {
     display:flex;
     justify-content: center;
-    margin: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #message-form {
@@ -290,7 +286,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40vw;
 }
 
 .text-field {
