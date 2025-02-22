@@ -258,6 +258,15 @@ footer {
     color: greenyellow; /* Gold Highlight */
 }
 
+#contact-me h2 {
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: greenyellow;
+    text-align: center;
+}
+
 /* Bullet List Styling */
 .service ul {
     list-style: none;
