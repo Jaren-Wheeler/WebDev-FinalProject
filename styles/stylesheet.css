@@ -108,13 +108,15 @@ nav a.active {
 }
 /* Main Content Container */
 .about-pg {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin: 3rem;
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
+#about-img {
+    border-radius: 2rem;
+}
 
 /* About Me Section - Align Image Left */
 .about-container {
