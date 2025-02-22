@@ -107,11 +107,14 @@ nav a.active {
     color: greenyellow;
 }
 /* Main Content Container */
-.container {
+.about-pg {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
+
 
 /* About Me Section - Align Image Left */
 .about-container {
@@ -136,11 +139,10 @@ nav a.active {
 
 .about-text {
     flex: 1;
-   
 }
 
 /* Contact Section */
-#contact {
+#description {
     color: #ddd;
     text-align: center;
     padding: 2rem;
@@ -149,13 +151,13 @@ nav a.active {
     width: 80%;
 }
 
-#contact a {
+#description a {
     color: #f4b400;
     font-weight: bold;
     text-decoration: none;
 }
 
-#contact a:hover {
+#description a:hover {
     text-decoration: underline;
 }
 
