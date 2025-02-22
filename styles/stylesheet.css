@@ -274,10 +274,43 @@ footer {
     justify-content: center;
     gap: 3rem;
 }
+
 #icon-container img {
     width: 5%;
 }
 
+#msg-container {
+    display:flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+#message-form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+}
+
+.text-field {
+    width: 40rem;
+    margin: 1rem;
+}
+
+#message-form input {
+    height: 2rem;
+}
+
+textarea {
+    height: 30vh;
+}
+
+#submit-btn {
+    width: 5rem;
+    align-self: center;
+    font-size: 1rem;
+}
 
 /* Responsive Design */
 @media (max-width: 900px) {
