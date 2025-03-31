@@ -215,6 +215,7 @@ footer {
     padding: 2rem;
 }
 
+
 /* Individual Project Box */
 .project {
     background: black;
@@ -230,6 +231,27 @@ footer {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: greenyellow; /* Gold Highlight */
+}
+
+.projectHovered {
+    background-color: greenyellow;
+    color: black;
+}
+
+.projectHovered h3 {
+    color: black;
+}
+
+#project-clicked-container {
+    background-color:grey;
+    display:none;
+    position: fixed;
+    width:70vw;
+    height:70vh;
+    margin:auto;
+    left: 0;
+    right: 0;
+    top: 15vh;
 }
 
 /* Resume Page Styling */
