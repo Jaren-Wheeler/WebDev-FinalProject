@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="jquery-ui-1.14.1.custom/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="styles/stylesheet.css">
     <title>Final Project</title>
 </head>
@@ -28,44 +29,49 @@
 
     <section id="projects">  <!-- container for listing items in boxes -->
         <h2>My Projects!</h2>
-        <h3>See below to read about various projects I have built. Click on the image to get re-directed to the project website.</h3>
+        <h3>Here are some of my projects. Click one to learn more!</h3>
         <div class="project-container">   <!-- listing items -->                       
-            <div class="project"> <!-- each box -->
-                <h3>Project 1</h3>
+            <div class="project p-one"> <!-- each box -->
+                <h3>Inventory Management System</h3>
                 <img src= "" alt="Image of project 1">
-                <p>Description of project 1</p>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <img src= "" alt="Image of project 1">
-                <p>Description of project</p>
+            <div class="project p-two">
+                <h3>Budget Manager</h3>
+                <img src="img/darkmodedashboard.png" alt="Image of project 2">
             </div>
-            <div class="project">
+            <div class="project p-three">
                 <h3>Project 3</h3>
-                <img src= "" alt="Image of project 1">
-                <p>Description of project</p>
+                <img src= "" alt="Image of project 3">
             </div>
-            <div class="project">
+            <div class="project p-four">
                 <h3>Project 4</h3>
-                <img src= "" alt="Image of project 1">
-                <p>Description of project</p>
+                <img src= "" alt="Image of project 4">
             </div>
-            <div class="project">
+            <div class="project p-five">
                 <h3>Project 5</h3>
-                <img src= "" alt="Image of project 1">
-                <p>Description of project</p>
+                <img src= "" alt="Image of project 5">
             </div>
-            <div class="project">
+            <div class="project p-six">
                 <h3>Project 6</h3>
-                <img src= "" alt="Image of project 1">
-                <p>Description of project</p>
+                <img src= "" alt="Image of project 6">
             </div>
         </div>
 
         <div id="project-clicked-container">
-            <h2>Project Title</h2>
-            <p>Description of project</p>
-            <button>Check it out</button>
+            <h2 id="project-desc">Project Title</h2>
+            <div id="pc-inner-container">
+                <div id="carousel">
+                    <div><img src="img/darkmodedashboard.png" alt="Image 1"></div>
+                    <div><img src="img/facebook-icon.png" alt="Image 2"></div>
+                    <div><img src="img/profile_pic.jpg" alt="Image 3"></div>
+                </div>
+                <div id="pc-description-container">
+                    <p>Description of project</p>
+                    <button>Check it out</button>
+                </div>
+                
+            </div>
+            
         </div>
 
     </section>
@@ -77,6 +83,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="scripts/projects.js"></script>
 </body>
 </html>
