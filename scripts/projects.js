@@ -13,8 +13,10 @@ function hoverProject() {
 
 // handles functionality when a project card is clicked.
 function clickProject() {
+   
     $(".project").click(function() {
         $("#project-clicked-container").show('fast');
+       
     });
 
      // Close project clicked window when clicking outside of it
@@ -22,16 +24,62 @@ function clickProject() {
         // looks for closest ancestor element that matches the selector. length returns 0 if the element is outside
         if (!$(event.target).closest("#project-clicked-container, .project").length) {
             $("#project-clicked-container").hide('fast');
+            $("#carousel").slick("unslick"); // make sure old carousel is resetted when a new project is clicked on
+            $(".github-link-btn").remove(); // remove dynamically created link buttons, so they don't get repeatedly created. 
         }
     });
 }
 
+function createCarousel(project) {
+    
+    $("#carousel").empty();
+    let images = [];
 
+    if (project.hasClass("p-one")) {
+        images = [];
+    }
+    if (project.hasClass("p-two")) {
+        images = [
+            "img/darkmodedashboard.png",
+            "img/profile_pic.jpg",
+            "img/x-icon.png"
+        ];
+    }
+    if (project.hasClass("p-three")) {
+        images = [];
+    }
+    if (project.hasClass("p-four")) {
+        images = [];
+    }
+    if (project.hasClass("p-five")) {
+        images = [];
+    }
+    if (project.hasClass("p-six")) {
+        images = [];
+    }
+
+    images.forEach(function(i) {
+        $("#carousel").append(`<div><img src="${i}" alt="project images"></div>`)
+    });
+
+    if (!$("#carousel").hasClass("slick-initialized")) {
+        $("#carousel").slick({
+            infinite:true,
+            autoplay:true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            autoplaySpeed: 5000
+        })
+    }
+   
+}
 
 // handles the functionality when clicking 
 function viewProject() {
     $(".project").click(function(e) {
-        let project = $(e.target); // grab the specific project being clicked
+        let project = $(e.target).closest(".project"); // grab the specific project being clicked
 
         // depending on the class of the project, display the information and show the image.
         if (project.hasClass("p-one")) {
@@ -39,45 +87,42 @@ function viewProject() {
             $("#project-clicked-container p").text(`Inventory Management System is a full-stack application designed in Java using Maven, incorporating
                 libraries such as SQLite and Swing. It is designed to help businesses keep track of their inventory as well as adding and removing
                 items.`);
+            $("#pc-description-container").append(`<button class="github-link-btn"><a href="https://github.com/Jaren-Wheeler/InventoryManager">Check it out!</a></button>`)
         } 
         if (project.hasClass("p-two")) {
-            projectCarousel();
+            
             $("#project-desc").text("Budget Management System");
             $("#project-clicked-container p").text(`Budget Manager is a full-stack application developed in
                 C#/.NET framework Windows Presentation Foundation (WPF). It utilizes SQLite for database CRUD interactions, 
                 and includes features such as a login system, and LiveCharts for real-time updating visuals, and a dark mode toggling
-                functionality.`);   
+                functionality.`);
+            $("#pc-description-container").append(`<button class="github-link-btn"><a href="https://github.com/Jaren-Wheeler/BudgetManagementApp">Check it out!</a></button>`)
         } 
         if (project.hasClass("p-three")) {
             $("#project-desc").text("Project 3");
+            $("#project-clicked-container p").text(`This is the description for project 3`); 
         }
         if (project.hasClass("p-four")) {
             $("#project-desc").text("Project 4");
+            $("#project-clicked-container p").text(`This is the description for project 4`); 
         }
         if (project.hasClass("p-five")) {
             $("#project-desc").text("Project 5");
+            $("#project-clicked-container p").text(`This is the description for project 5`); 
         } 
         if (project.hasClass("p-six")) {
             $("#project-desc").text("Project 6");
+            $("#project-clicked-container p").text(`This is the description for project 6`); 
         }
+
+        createCarousel(project);
     })
 
 }
 
+// apply sortable ui interaction to projects
 function projectSortable() {
     $(".project-container").sortable();
-}
-
-function projectCarousel() {
-    $("#carousel").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000
-    });
 }
 
 // call the functions

@@ -244,20 +244,24 @@ footer {
 
 #project-clicked-container {
     background-color:grey;
-    display:none;
+    display: none;
     position: fixed;
     width:70vw;
     height:70vh;
     margin:auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
     left: 0;
     right: 0;
     top: 15vh;
+    
 }
 
 #pc-inner-container {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
+    margin:10px;
 }
 
 .project img {
@@ -268,18 +272,14 @@ footer {
 }
 
 #carousel {
-    width: 600px;
-    height: 400px;
-    overflow: hidden;
-    justify-content:center;
+    width:600px;
+    height:300px;
 }
 
 #carousel img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 600px;
+    height: 300px;
 }
-
 
 /* Resume Page Styling */
 .resume {
