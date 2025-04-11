@@ -110,15 +110,6 @@ header h1 {
     right: 0;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(75px);
-    }
-}
-
 #toggle-btn-container {
     display: flex;
     justify-content: center;
@@ -317,6 +308,18 @@ footer {
     flex-direction: row;
     gap: 3rem;
     margin:10px;
+}
+
+.github-link-btn {
+    background-color: grey;
+    border: 3px solid yellowgreen;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.github-link-btn a {
+    text-decoration: none;
+    color: yellowgreen;
 }
 
 .project img {

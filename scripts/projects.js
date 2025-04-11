@@ -1,9 +1,8 @@
 function toggleDarkMode() {
-    const toggleBtn = document.getElementById("toggle-mode");
-    toggleBtn.addEventListener("click", () => {
+    $("#toggle-mode").click(function() {
     document.body.classList.toggle("light-mode");
     })}
-    
+
 // handles the hovering event on each project card
 function hoverProject() {
     $(".project").hover(
@@ -105,6 +104,26 @@ function createCarousel(project) {
    
 }
 
+//Bouncing Grren Balls
+function addBouncingBallAnimation() {
+    $(document).ready(function () {
+        function bounceBallRight() {
+            $(".bouncing-ball.ball-right")
+                .animate({ top: "+=50px" }, 500)
+                .animate({ top: "-=50px" }, 500, bounceBallRight);
+        }
+   
+        function bounceBallLeft() {
+            $(".bouncing-ball.ball-left")
+                .animate({ top: "+=50px" }, 500)
+                .animate({ top: "-=50px" }, 500, bounceBallLeft);
+        }
+   
+        bounceBallRight();
+        bounceBallLeft();
+    });
+}
+
 // handles the functionality when clicking 
 function viewProject() {
     $(".project").click(function(e) {
@@ -157,6 +176,7 @@ function projectSortable() {
 
 // call the functions
 $(document).ready(function() {
+    addBouncingBallAnimation();
     toggleDarkMode();
     hoverProject();
     clickProject();

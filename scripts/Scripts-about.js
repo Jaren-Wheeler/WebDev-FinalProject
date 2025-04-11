@@ -1,29 +1,62 @@
-
+// accordion JQuery widget
 $(document).ready(function(){
     $("#accordion").accordion();
 });
-    
+   
+//tabs JQuery widget
 $(document).ready(function() {
     $("#tabs" ).tabs();
 });
 
-const toggleBtn = document.getElementById("toggle-mode");
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
+// toggle dark mode button
+
+$("#toggle-mode").click(function() {
+    $("body").toggleClass("light-mode");
 });
 
-const quoteText = document.getElementById("quote-text");
-const quoteBtn = document.getElementById("new-quote-btn");
-
-async function fetchQuote() {
-    try {
-        const response = await fetch("https://qapi.vercel.app/api/random");
-        const data = await response.json();
-        quoteText.textContent = `"${data.quote}"`;
-    } catch (error) {
-        quoteText.textContent = "Failed to load quote. Try again.";
-        console.error("Error fetching quote:", error);
+//Bouncing Grren Balls
+$(document).ready(function () {
+    function bounceBallRight() {
+        $(".bouncing-ball.ball-right")
+            .animate({ top: "+=50px" }, 500)
+            .animate({ top: "-=50px" }, 500, bounceBallRight);
     }
+
+    function bounceBallLeft() {
+        $(".bouncing-ball.ball-left")
+            .animate({ top: "+=50px" }, 500)
+            .animate({ top: "-=50px" }, 500, bounceBallLeft);
+    }
+
+    bounceBallRight();
+    bounceBallLeft();
+});
+
+// ajax request and api call for the quote generator
+function fetchQuote() {
+    $(document).ready(function() {
+        const xhr = new XMLHttpRequest(); //request object
+        var url = "https://qapi.vercel.app/api/random"; // url for api
+        xhr.open("GET", url, true); //use open of type GET on the url
+    
+        // when the request is finished loading, execute
+      
+            // 200 is a successful request. If successful, get the quote. Otherwise throw an error
+            if (xhr.status === 200) {
+                try {
+                    const data = JSON.parse(xhr.responseText);
+                    $("#quote-text").text(`"${data.quote}"`);
+                } catch (e) {
+                    $("#quote-text").text("Error parsing quote.");
+                    console.error("JSON parse error:", e);
+                }
+            } else { // if any other status but 200 is  thrown, throw an error
+                $("#quote-text").text("Failed to load quote. Try again.");
+                console.error("Error fetching quote: status", xhr.status);
+            }
+    
+        xhr.send(); // execute the request
+    })   
 }
 
-quoteBtn.addEventListener("click", fetchQuote);
+$("#new-quote-btn").click(fetchQuote); //event listener for the button
