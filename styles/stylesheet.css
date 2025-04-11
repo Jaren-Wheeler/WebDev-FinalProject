@@ -119,12 +119,18 @@ header h1 {
     }
 }
 
+#toggle-btn-container {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+
 #toggle-mode {
     width: 12rem;
-    margin: auto;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
-    border: 5px solid yellowgreen;
+    border: 3px solid yellowgreen;
     border-radius: 5px;
     color: yellowgreen;
     background-color: black;
