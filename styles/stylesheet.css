@@ -17,12 +17,11 @@ body {
 
 /* light Mode Styles */
 body.light-mode {
-    background-color: rgba(76, 227, 187, 0.658);
+    background-color: beige;
     color: black;
   }
 
 #home {
-    /*background-color:#3B3B3B;*/
     background-image: url("../img/background.gif");
     background-size: cover;
     background-position: center;
@@ -45,7 +44,7 @@ body.light-mode {
 }
 
 #home h2 {
-    margin: 2re;
+    margin: 2rem;
     padding-top: 0;
     
 }
@@ -120,6 +119,17 @@ header h1 {
     }
 }
 
+#toggle-mode {
+    width: 12rem;
+    margin: auto;
+    font-size: 16px;
+    font-weight: bold;
+    border: 5px solid yellowgreen;
+    border-radius: 5px;
+    color: yellowgreen;
+    background-color: black;
+}
+
 /* Navigation */
 nav {
     display: flex;
@@ -147,6 +157,7 @@ nav a.active {
 .active-pg {
     color: greenyellow;
 }
+
 /* Main Content Container */
 .about-pg {
     margin: 3rem;
@@ -188,7 +199,6 @@ nav a.active {
 /* Contact Section */
 #description {
     color: #ddd;
-    /*text-align: center;*/
     padding: 2rem;
     border-radius: 10px;
     margin: 2rem auto;

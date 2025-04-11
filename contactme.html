@@ -18,15 +18,18 @@
         <div class="bouncing-ball ball-right"></div>
     </header>
 
-    <button id="toggle-mode">Toggle Background Color</button>
+    <div id="toggle-btn-container">
+        <button id="toggle-mode">Toggle Background Color</button>
+    </div>
+    
 
     <nav>
         <a href="about.html" aria-label="Previous page">&lt;</a> 
         <a href="index.html">HOME</a> 
         <a href="about.html">ABOUT</a>   
-        <a class="active-pg" href="projects.html">PROJECTS</a>            
+        <a href="projects.html">PROJECTS</a>            
         <a href="resume.html">RESUME</a>
-        <a href="contactme.html">CONTACT</a>
+        <a class="active-pg" href="contactme.html">CONTACT</a>
         <a href="resume.html" aria-label="Next page">&gt;</a> 
     </nav>
 
@@ -59,36 +62,8 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery should be in head or top of body -->
-    <script src="contactme.js">
-        document.addEventListener("DOMContentLoaded", function () {
-            // Contact form submit handler
-            $('#contact-form').on('submit', function (e) {
-                e.preventDefault();
-
-                const email = $('#email').val();
-                const message = $('#message').val();
-                const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-
-                if (!emailPattern.test(email)) {
-                    $('#error-message').show();
-                    return;
-                } else {
-                    $('#error-message').hide();
-                }
-
-                const subject = encodeURIComponent("New message from contact form");
-                const body = encodeURIComponent("From: " + email + "\n\nMessage:\n" + message);
-                window.location.href = `mailto:jkgilbert@live.ca?subject=${subject}&body=${body}`;
-            });
-
-            // Toggle dark/light mode
-            const toggleBtn = document.getElementById("toggle-mode");
-            if (toggleBtn) {
-                toggleBtn.addEventListener("click", () => {
-                    document.body.classList.toggle("light-mode");
-                });
-            }
-        });
+    <script src="scripts/contactme.js">
+        
     </script>
 </body>
 </html>

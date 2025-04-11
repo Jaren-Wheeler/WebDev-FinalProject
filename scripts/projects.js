@@ -1,4 +1,9 @@
-
+function toggleDarkMode() {
+    const toggleBtn = document.getElementById("toggle-mode");
+    toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    })}
+    
 // handles the hovering event on each project card
 function hoverProject() {
     $(".project").hover(
@@ -152,6 +157,7 @@ function projectSortable() {
 
 // call the functions
 $(document).ready(function() {
+    toggleDarkMode();
     hoverProject();
     clickProject();
     viewProject();
