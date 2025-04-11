@@ -374,8 +374,8 @@ footer {
     gap: 3rem;
 }
 
-#icon-container img {
-    width: 5%;
+#icon-container a img{
+    width: 60px;
 }
 
 /* Contact Form Styles */
