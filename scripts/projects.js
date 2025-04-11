@@ -127,7 +127,6 @@ function addBouncingBallAnimation() {
 // handles the functionality when clicking 
 function viewProject() {
     $(".project").click(function(e) {
-        let project = $(e.target).closest(".project"); // grab the specific project being clicked
 
         // depending on the class of the project, display the information and show the image.
         if (project.hasClass("p-one")) {
