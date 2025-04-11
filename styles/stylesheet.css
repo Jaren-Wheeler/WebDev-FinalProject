@@ -15,6 +15,12 @@ body {
     min-height: 100vh;
 }
 
+/* light Mode Styles */
+body.light-mode {
+    background-color: rgba(76, 227, 187, 0.658);
+    color: black;
+  }
+
 #home {
     /*background-color:#3B3B3B;*/
     background-image: url("../img/background.gif");
@@ -72,6 +78,8 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
@@ -80,6 +88,36 @@ header h1 {
     font-style: normal;
     font-size: 3rem;
     color: greenyellow;
+}
+
+.bouncing-ball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+/*Bouncing ball*/
+.ball-left {
+    top: 0;
+    left: 0;
+}
+
+.ball-right {
+    top: 0;
+    right: 0;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(75px);
+    }
 }
 
 /* Navigation */
@@ -118,6 +156,7 @@ nav a.active {
 }
 
 #about-img {
+    padding-top: 120px;
     border-radius: 2rem;
 }
 
@@ -323,6 +362,88 @@ footer {
     width: 5%;
 }
 
+/* Contact Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    width: 80%;
+}
+
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form textarea {
+    height: 30vh;
+}
+
+#contact-form button {
+    color: yellowgreen;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 3px solid yellowgreen;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(44, 43, 43);
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+    display: none;
+    font-weight: bold;
+}
+
+/*Quote Generator*/
+.quote-box {
+    border: 2px solid #0b0909;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: yellowgreen;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.quote-box h3 {
+    margin-bottom: 0.5rem;
+}
+
+#quote-text {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+#new-quote-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: yellowgreen;
+    transition: background-color 0.3s;
+}
+
+#new-quote-btn:hover {
+    background-color: #555;
+}
+
+
 #msg-container {
     display:flex;
     justify-content: center;
@@ -361,6 +482,15 @@ textarea {
     padding: 0.25rem;
     text-align: center;
     background-color: rgb(44, 43, 43);
+}
+
+#accordion .ui-accordion-header,
+#accordion .ui-accordion-content {
+    background-color: yellowgreen;
+}
+
+#tabs {
+    background-color: yellowgreen;
 }
 
 /* Responsive Design */

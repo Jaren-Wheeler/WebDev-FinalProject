@@ -30,38 +30,62 @@ function clickProject() {
     });
 }
 
+// creates the carousel for the project
 function createCarousel(project) {
     
-    $("#carousel").empty();
-    let images = [];
+    $("#carousel").empty(); // empty the carousel
+    let images = []; // intialize image array
 
+    // for different project classes, add the corresponding images to the image array
     if (project.hasClass("p-one")) {
-        images = [];
+        images = [
+            "img/javalogin.png",
+            "img/javadashboard.png",
+            "img/inventorylist.png"
+        ];
     }
     if (project.hasClass("p-two")) {
         images = [
             "img/darkmodedashboard.png",
-            "img/profile_pic.jpg",
-            "img/x-icon.png"
+            "img/login_budget.png",
+            "img/addInfobudget.png"
         ];
     }
     if (project.hasClass("p-three")) {
-        images = [];
+        images = [
+            "img/etchasketch.png",
+            "img/etchasketchgridnum.png",
+            "img/etchasketch2.png"
+        ];
     }
     if (project.hasClass("p-four")) {
-        images = [];
+        images = [
+            "img/ubereats.png",
+            "img/ubereats2.png",
+            "img/ubereats3.png"
+        ];
     }
     if (project.hasClass("p-five")) {
-        images = [];
+        images = [
+            "img/westjet.png",
+            "img/westjet2.png",
+            "img/westjet3.png"
+        ];
     }
     if (project.hasClass("p-six")) {
-        images = [];
+        images = [
+            "img/airbnb.png",
+            "img/airbnb2.png",
+            "img/airbnb3.png"
+        ];
     }
 
+    // for each of them, append to the empty carousel div in the projects.html file
     images.forEach(function(i) {
         $("#carousel").append(`<div><img src="${i}" alt="project images"></div>`)
     });
-
+    
+    // if the carousel hasn't been initalized already, perform slick. If it has, do nothing
     if (!$("#carousel").hasClass("slick-initialized")) {
         $("#carousel").slick({
             infinite:true,
@@ -101,6 +125,7 @@ function viewProject() {
         if (project.hasClass("p-three")) {
             $("#project-desc").text("Project 3");
             $("#project-clicked-container p").text(`This is the description for project 3`); 
+            $("#pc-description-container").append(`<button class="github-link-btn"><a href="https://github.com/Jaren-Wheeler/etch_a_sketch">Check it out!</a></button>`)
         }
         if (project.hasClass("p-four")) {
             $("#project-desc").text("Project 4");
@@ -115,7 +140,7 @@ function viewProject() {
             $("#project-clicked-container p").text(`This is the description for project 6`); 
         }
 
-        createCarousel(project);
+        createCarousel(project); // call the createCarousel function
     })
 
 }

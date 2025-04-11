@@ -10,12 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpeg" href="img/SSlogo.jpg"> <!-- Favacon logo (make img = 96x96) -->
     <link rel="stylesheet" href="styles/stylesheet.css"> <!-- links -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 </head>                         
     
 <body>
     <header>
         <h1>Ryan Jaren Gilbert</h1>
+        <div class="bouncing-ball ball-left"></div>
+        <div class="bouncing-ball ball-right"></div>
     </header>
+
+    <button id="toggle-mode">Toggle Background Color</button>
+
     <nav>
         <a href="index.html" aria-label="Previous page">&lt;</a> 
         <a href="index.html">HOME</a> 
@@ -28,15 +34,81 @@
     <section class="about-pg">     <!-- Main info (about) -->
         <img src="img/profile_pic.jpg" id="about-img" alt="A picture of my face.">
         <div id="description">  <!-- more text for underneath, done in boxes -->
-            <h2>About Me</h2>
-            <p>In my years of development experience, I have learned the ins and outs of what makes the front-end pop! I am an expert at crafting the user experience with both
-                accessible functionality and cutting-edge design, and passionate about blending technologies together deliver the best products. </p>
-            <p>I am from Canada, where I love to spend my time skiing, playing hockey, reading, fishing, and developing coding projects in my spare time.</p>
+            <h2>About Us</h2> 
+            <div id="accordion">   
+                <h3>Jaren</h3>
+                <div>First content panel</div>
+                
+                <h3>Jordan</h3>
+                <div>Second content panel</div>
+                
+                <h3>Ryan</h3>
+                <div>Third content panel</div>
+            </div>
+            <div class="quote-box">
+              <h3>Random Quote Generator</h3>
+              <p id="quote-text">Click the button to get inspired!</p>
+              <button id="new-quote-btn">Get New Quote</button>
+          </div>
+    </section>
+    <section>
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Python</a></li>
+              <li><a href="#tabs-2">Web-Development</a></li>
+              <li><a href="#tabs-3">Java</a></li>
+              <li><a href="#tabs-4">C#</a></li>
+              <li><a href="#tabs-5">SQL</a></li>
+            </ul>
+            <div id="tabs-1">
+              <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+            </div>
+            <div id="tabs-2">
+              <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            </div>
+            <div id="tabs-3">
+              <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+              <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+            </div>
+            <div id="tabs-4">
+                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+              </div>
+              <div id="tabs-5">
+                <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+              </div>
+          </div>
     </section>
 
     <footer>
         <p>&copy; Created by Jordan Gilbert, Ryan Heidinger, and Jaren Wheeler, 2025</p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="scripts/Scripts-about.js"></script>
 </body>
+
+<script>
+    const toggleBtn = document.getElementById("toggle-mode");
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+    });
+
+    const quoteText = document.getElementById("quote-text");
+    const quoteBtn = document.getElementById("new-quote-btn");
+
+    async function fetchQuote() {
+        try {
+            const response = await fetch("https://qapi.vercel.app/api/random");
+            const data = await response.json();
+            quoteText.textContent = `"${data.quote}"`;
+        } catch (error) {
+            quoteText.textContent = "Failed to load quote. Try again.";
+            console.error("Error fetching quote:", error);
+        }
+    }
+
+    quoteBtn.addEventListener("click", fetchQuote);
+</script>
 
 </html>
