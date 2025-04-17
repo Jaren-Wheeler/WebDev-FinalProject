@@ -128,6 +128,8 @@ function addBouncingBallAnimation() {
 function viewProject() {
     $(".project").click(function(e) {
 
+        let project = $(this); // project being clicked
+
         // depending on the class of the project, display the information and show the image.
         if (project.hasClass("p-one")) {
             $("#project-desc").text("Inventory Management System");

@@ -40,7 +40,7 @@ function fetchQuote() {
         xhr.open("GET", url, true); //use open of type GET on the url
     
         // when the request is finished loading, execute
-      
+        xhr.onload = function () {
             // 200 is a successful request. If successful, get the quote. Otherwise throw an error
             if (xhr.status === 200) {
                 try {
@@ -54,6 +54,7 @@ function fetchQuote() {
                 $("#quote-text").text("Failed to load quote. Try again.");
                 console.error("Error fetching quote: status", xhr.status);
             }
+        };
     
         xhr.send(); // execute the request
     })   
